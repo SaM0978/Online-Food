@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Online | Food</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bg">
+            <div class="navbar">
+                <div class="list">
+                    <ul>
+                        <img src="{% static 'logos/hp.png' %}" alt="logo" srcset="">
+                        <li class="items" id="items-1"><a href="#">Home</a></li>
+                        <li class="items" id="items-2"><a href="#">Services</a></li>
+                        <li class="items" id="items-3"><a href="#">About Us</a></li>
+                        <li class="items" id="items-4"><a href="#">Contact</a></li>
+                        {% if not request.user.is_authenticated %}
+                        <li class="items" id="items-5"><a href="{% url 'signup' %}">Sign-Up</a></li>
+                        <li class="items" id="items-6"><a href="{% url 'login' %}">Login</a></li>
+                        {% endif %}
+                        {% if request.user.is_authenticated %}
+                        <li class="items" id="items-7"><a href="{% url 'index' %}">Dashboard</a></li>
+                        {% endif %}
+                    </ul>
+
+                </div>
+            </div>
+            <div id="home">
+                <div class="home-section">
+                    <h1 class="head">Welcome To Online Meal</h1>
+                    <p class="center p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, dolore?
+                        Asperiores, non nobis!
+                    </p>
+                    <p class="center p">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <div id="btn">
+                        <button class="btn">Order Here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg2">
+            <h1 class="ser">Our Serivces</h1>
+            <div class="boxes">
+                <div class="box" id="box-1">
+                    <img src="{% static 'icons/pizza.png' %}" alt="">
+                    <div class="content">
+                        <h2 class="s-head">Food-Catering</h2>
+                        <p class="center b">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quos doloribus
+                            quae
+                            delectus!</p>
+                    </div>
+                </div>
+                <div class="box" id="box-2">
+                    <img src="{% static 'icons/dele.png' %}" alt="">
+                    <div class="content">
+                        <h2 class="s-head">Food-Delivery</h2>
+                        <p class="center b">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quos doloribus
+                            quae
+                            delectus!</p>
+                    </div>
+                </div>
+                <div class="box" id="box-3">
+                    <img src="{% static 'icons/cb.png' %}" alt="">
+                    <div class="content">
+                        <h2 class="s-head">Gathering</h2>
+                        <p class="center b">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quos doloribus
+                            quae
+                            delectus!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg3">
+            <div class="clients">
+                <h1 class="head cl">Our Clients</h1>
+                <div class="images">
+                    <img src="{% static 'logos/apple.png' %}" alt="" srcset="" id="a">
+                    <img src="{% static 'logos/hp.png' %}" alt="" srcset="" id="b">
+                    <img src="{% static 'logos/apple.png' %}" alt="" srcset="" id="c">
+                    <img src="{% static 'logos/skype.png' %}" alt="" srcset="" id="d">
+                </div>
+            </div>
+        </div>
+        <div class="bg4">
+            <h1 class="head2" style="padding: 14px;">Contact Us</h1>
+            <div class="contact">
+                <div class="forms">
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="name r">
+                            <label for="">Name</label>
+                            <input type="text" placeholder="Enter Your Name" name="name" required>
+                        </div>
+                        <div class="Email r">
+                            <label for="">Email</label>
+                            <input type="email" placeholder="Enter Your Email" name="email" required>
+                        </div>
+                        <div class="number r">
+                            <label for="">Phone-Number</label>
+                            <input type="number" placeholder="Enter Your Phone-Number" name="phonenumber" required>
+                        </div>
+                        <div class="text r">
+                            <label for="">Message</label>
+                            <textarea name="message" cols="50" rows="10" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div class="submit r">
+                            <input type="submit" value="Submit" class="btn sub">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

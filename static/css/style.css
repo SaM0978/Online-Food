@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+html {
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+.container{
+    width: 101%;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'sans-serif';
+}
+
+/* Utils */
+
+.head{
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.head2{
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+}
+
+.s-head{
+    text-align: center;
+    font-size: 26px;
+}
+
+.center{
+    text-align: center;
+}
+
+b{
+    color: black;
+}
+
+.p{
+    color: white;
+}
+
+/* Variables */
+
+:root{
+    --navbar-h: 10vh;
+}
+
+
+/* Navbar */
+
+.navbar img{
+    display: inline;
+    transform: scale(0.7);
+    position: relative;
+    left: -289px;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    background-color: #585858;
+    opacity: 0.7;
+    transition: all 200ms ease-in-out;
+}
+
+.navbar:hover{
+    opacity: 0.9;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar ul{
+    display: flex;
+    height: var(--navbar-h);
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar li{
+    padding: 46px;
+    display: inline;
+    font-size: 1.6em;
+}
+
+/* Background-1 */
+
+.bg{
+    background: url(../bg/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+}
+
+
+/* Home */
+
+#home{
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-section .head{
+    padding: 10px;
+}
+
+.home-section p{
+    padding: 4px;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 25px;
+    outline: none;
+    border: 2px solid beige;
+    transition: all 325ms ease-in-out;
+}
+
+.btn:hover, .btn:active{
+    border: 2px solid rgb(187, 234, 253);
+    box-shadow: 1px 1px 100px rgb(187, 234, 253);
+}
+
+#btn{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Boxes */
+
+.ser{
+    margin: 10px;
+    text-align: center;
+    font-size: 34px;
+    padding: 10px;
+}
+
+/* .boxes{} */
+
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box{
+    margin: 10px;
+    width: 450px;
+    height: 250px;  
+    background:#f5c7c7dc;
+    border-radius: 25px;
+    border: 2px solid brown;
+}   
+
+#box-1 img{
+    transform: scale(0.7);
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+    top: -12px;
+    left: 90px;
+}
+
+#box-1 .content {
+    position: relative;
+    top: -35px;
+    left: 0px;
+}
+
+
+#box-2 img {
+    transform: scale(1);
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+    top: -45px;
+    left: 116px;
+}
+
+#box-2 .content{
+    position: relative;
+    top: -82px;
+    left: 0px;
+}
+
+
+#box-3 img {
+    transform: scale(0.688) rotate(45deg);
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: relative;
+    top: -58px;
+    left: 116px;
+}
+
+#box-3 .content{
+    position: relative;
+    top: -102px;
+    left: 0px;
+}
+
+/* Clients */
+
+.bg3{
+    background-image: url(../bg/Bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 294px;
+    width: 100%;
+}
+
+.bg3 .images img{
+    transform: scale(0.78);
+}
+
+.bg3 .images #a{
+    position: relative;
+    top: 62px;
+    left: -1px;
+}
+
+.bg3 .images #b{
+    position: relative;
+    top: 19px;
+    left: -1px;
+}
+
+.bg3 .images #c{
+    position: relative;
+    top: 60px;
+    left: -1px;
+}
+
+.bg3 .images #d{
+    position: relative;
+    top: 11px;
+    left: -1px;
+}
+
+.bg3 .images{
+    position: relative;
+    top: -61px;
+    left: 312px;
+}
+
+.cl{
+    font-size: 2.4em;
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+}
+
+/* Contact */
+
+.bg4{
+    background: url(../bg/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 468px;
+    width: 100%;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg4 input, textarea{
+    padding: 5px;
+    display: block;
+    width: 400px;
+    transition: all 300ms ease-in-out;
+}
+
+.bg4 input{
+    outline: none;
+    transition: all 300ms ease-in-out;
+}
+
+.bg4 input:focus, .bg4 textarea:focus{
+    border: 2px solid rgb(187, 234, 253);
+    box-shadow: 1px 1px 100px rgb(187, 234, 253);
+}
+
+.bg4 label{
+    color: black;
+    font-weight: bold;
+}
+
+.r{
+    padding: 2px;
+}
+
+.submit{
+    padding-top: 10px;    
+}
+
+.sub{
+    border: 2px solid aliceblue;
+}
+
